@@ -1,0 +1,3 @@
+[submodule "lib/dependencies/MFRC522python"]
+	path = lib/dependencies/MFRC522python
+	url = https://github.com/danjperron/MFRC522-python
