@@ -1,0 +1,4 @@
+Execute this by running
+`python3 main.py`
+No sound:
+https://raspberrypi.stackexchange.com/questions/120034/python-script-not-playing-audio-when-run-through-systemd
