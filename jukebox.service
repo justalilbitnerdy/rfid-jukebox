@@ -1,0 +1,11 @@
+[Unit]
+Description=jukebox
+After=sound.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /etc/jukebox/main.py -input=rfid
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
