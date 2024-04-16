@@ -8,6 +8,7 @@ import argparse
 import signal
 from lib.rfid import RFIDReader
 import threading
+from mutagen.mp3 import MP3
 
 mountpoint = "/etc/jukebox/usb/"
 currentProgress = 0
@@ -29,7 +30,10 @@ def playSong(filePath):
   if filePath != currentSong:
     currentSong = filePath
     mixer.music.stop()
-    trackLength = MP3(filePath).info.length*SEC_TO_MS
+    mixer.quit()
+    trackInfo = MP3(filePath).info
+    trackLength = trackInfo.length*SEC_TO_MS
+    mixer.init(trackInfo.sample_rate)
     mixer.music.load(filePath)
     mixer.music.play()
     while mixer.music.get_busy():

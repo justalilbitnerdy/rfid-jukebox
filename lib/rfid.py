@@ -37,6 +37,9 @@ class RFIDReader:
           uid = uidToString(uid)
           if type(uid) is list:
             continue
+        else:
+          status = None
+          uid = None
     return uid
 if __name__ == "__main__":
   reader = RFIDReader()
