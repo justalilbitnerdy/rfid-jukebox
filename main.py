@@ -9,7 +9,7 @@ import signal
 from lib.rfid import RFIDReader
 import threading
 
-mountpoint = "usb/"
+mountpoint = "/etc/jukebox/usb/"
 currentProgress = 0
 SEC_TO_MS = 1000
 

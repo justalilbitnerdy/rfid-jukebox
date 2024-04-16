@@ -2,7 +2,7 @@ import os
 from lib.config import loadConfig
 from datetime import datetime
 
-mountpoint = "./usb"
+mountpoint = "/etc/jukebox/usb"
 class Unmounted(Exception):
     pass
 class SongNotFound(Exception):
